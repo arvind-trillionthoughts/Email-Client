@@ -1,0 +1,42 @@
+.bg{
+    background: url("../assets/cabackground-blue.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    filter: blur(3px);
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background-color: rgba(3, 16, 100, 0.207);
+}
+.navBar{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item{
+    cursor: pointer;
+    padding: 17px;
+    font-size: 15px;
+    color: white;
+}
+.item.active{
+    border-bottom: 3px solid white;
+}
+.icon{
+    width: 30px;
+    /* margin-right: 10px; */
+    filter: invert();
+}
+.dropdown{
+    cursor: pointer;
+    position: relative;
+}

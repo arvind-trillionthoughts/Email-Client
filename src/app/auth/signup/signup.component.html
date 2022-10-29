@@ -1,0 +1,59 @@
+
+<div class="container">
+  <form (ngSubmit)="onSubmit()" class="myForm" [formGroup]="signup">
+    <h3>Signup</h3>
+    <div class="inputBox">
+      <app-input inputType="email"
+        label="Email Id"
+        [control]="signup.get('email')"
+      ></app-input>
+      <app-input inputType="text"
+        label="First Name"
+        [control]="signup.get('first_name')"
+      ></app-input>
+      <app-input inputType="text"
+        label="Last Name"
+        [control]="signup.get('last_name')"
+      ></app-input>
+      <app-input inputType="number"
+        label="Phone"
+        [control]="signup.get('phone')"
+      ></app-input>
+      <app-input inputType="text"
+        label="Location"
+        [control]="signup.get('location')"
+      ></app-input>
+      <app-input inputType="password"
+        label="Password"
+        [control]="signup.get('password')"
+      ></app-input>
+      <app-input inputType="password"
+        label="Confirm Password"
+        [control]="signup.get('passwordConfirmation')"
+      ></app-input>
+
+      <div
+        *ngIf="
+          signup.errors &&
+          signup.controls.password.touched &&
+          signup.controls.passwordConfirmation.touched
+        "
+        class="ui red basic label"
+      >
+        <p *ngIf="signup.errors!.passwordDontMatch">
+          Password and Password Confirm must match
+        </p>
+        <p *ngIf="signup.errors!.noConnection">
+          No Internet Connection detetction, failed to Signup.
+        </p>
+        <p *ngIf="signup.errors!.unknownError">
+          Oops... Something Went wrong. Try again.
+        </p>
+      </div>
+    </div>
+    <div class="button">
+      <button class="submitButton" [disabled]="signup.invalid">Submit</button>
+      <p>Already have an account ? <a routerLink="">Signin</a></p>
+    </div>
+  </form>
+</div>

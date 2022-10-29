@@ -1,0 +1,45 @@
+<div class="bg"></div>
+<div class="container">
+  <div class="navBar">
+    <a class="item" routerLink="/">Angular Email</a>
+
+    <div class="right menu">
+      <ng-container *ngIf="signedIn">
+        <!-- <a class="item" routerLink="./inbox" routerLinkActive="active"
+          >Inbox</a
+        > -->
+        <!-- <a class="item" routerLink="./signout" routerLinkActive="active" 
+          >Sign Out</a
+        > -->
+        <a class="dropdown">
+          <img class="icon" src="../assets/user-shape.svg" alt="icon" />
+        </a>
+        <div class="dropdown-menu">
+          <div>
+            <img class="icon" src="../assets/user-shape.svg" alt="icon" />
+            <div>
+              <p>{{ username }}</p>
+              <p>{{ email }}</p>
+            </div>
+          </div>
+          <a class="items" routerLink="./signout" routerLinkActive="active"
+            >Sign Out</a
+          >
+        </div>
+      </ng-container>
+      <ng-container *ngIf="!signedIn">
+        <a
+          class="item"
+          routerLink="./"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          >Sign In</a
+        >
+        <a class="item" routerLink="./signup" routerLinkActive="active"
+          >Sign Up</a
+        >
+      </ng-container>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

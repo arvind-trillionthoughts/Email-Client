@@ -1,0 +1,20 @@
+<div class="mainBox">
+  <h3>INBOX</h3>
+  <div class="item" *ngFor="let email of emailList">
+    <a [routerLink]="email.id" routerLinkActive="active">
+      <div class="content">
+        <div class="subject">
+          {{ email.subject }}
+        </div>
+        <p class="from">
+          {{ email.fromaddress }}
+        </p>
+        <p class="content">
+          {{ email.content }}
+        </p>
+      </div>
+    </a>
+    <hr/>
+  </div>
+
+</div>

@@ -1,0 +1,43 @@
+.mainBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h3{
+    padding: 5px;
+    border-bottom: 2px solid rgba(1, 1, 59, 0.732);
+    font-weight: bolder;
+}
+.item{
+    width: 100%;
+
+}
+.item a{
+    color: black;
+}
+a.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a.active::after{
+    
+    font-size: 25px;
+}
+.content{
+    width: 100%;
+}
+.subject{
+    font-size: 16px;
+    font-weight: bold;
+}
+.from{
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.content{
+    font-size: 10px;
+    /* padding-top: 5px; */
+    padding-left: 13px;
+}

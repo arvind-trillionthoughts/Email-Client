@@ -1,0 +1,41 @@
+/* @import "compass/css3"; */
+.Home{
+    background-color: rgb(255, 255, 255);
+    height: 97vh;
+    width: 100vw;
+    display: flex;
+}
+.inbox{
+    width: 30%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.showMail{
+    width: 70%;
+    margin: 20px;
+}
+.or-spacer-vertical {
+    display:inline-block;
+     width:50px; 
+     margin-top: 20px;
+     height: 100vh;
+    position:relative; 
+}
+    
+    .mask { 
+      overflow:hidden; width:20px; height:93%; 
+      
+    }
+    .right .mask:before { 
+      content:''; 
+      display:block; margin-left:20px;
+      width:20px; height:100%; 
+      border-radius:12px / 125px; 
+      box-shadow:0 0 8px black;
+    }
+  
+    
+    
+/*  */

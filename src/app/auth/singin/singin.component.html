@@ -1,0 +1,26 @@
+
+<div class="container">
+    <form (ngSubmit)="onSubmit()" class="myForm" [formGroup]="signin">
+      <h3>Sign In</h3>
+      <div class="inputBox">
+        <app-input inputType="email"
+          label="Email Id"
+          [control]="signin.get('email')"
+        ></app-input>
+        <app-input inputType="password"
+          label="Password"
+          [control]="signin.get('password')"
+        ></app-input>   
+      </div>
+      <div *ngIf="signin.errors" class="ui red basic label">
+        <p *ngIf="signin.errors,credentials">
+            Invalid Username or Password.
+        </p>
+      </div>
+      <div class="button">
+        <button class="submitButton" [disabled]="signin.invalid">Login</button>
+        <p>Don't have an account ? <a routerLink="/signup">Sign up here</a></p>
+      </div>
+    </form>
+  </div>
+  <ng-http-loader></ng-http-loader>
